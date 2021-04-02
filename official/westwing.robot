@@ -1,16 +1,16 @@
 *** Settings ***
 Documentation   automation web UI testing for westwingnow.de
 Library     SeleniumLibrary
-Library     lib/WestwingUI.py
-Resource        keywords/WestWingKeywords.robot
+Library     ../lib/WestwingUI.py
+Resource        ../keywords/WestWingKeywords.robot
 
-Suite Setup		WW WEB UI StartTest
-Suite Teardown	WW WEB UI EndTest
-#Test Setup		NS WEB UI StartTest
-#Test Teardown	 NS WEB UI EndTest
+Suite Setup		WW WEB UI StartTest-Chrome
+Suite Teardown	WW WEB UI EndTest-Chrome
+#Test Setup		WW WEB UI StartCaseTest
+#Test Teardown	 WW WEB UI EndCaseTest
 *** Test Cases ***
-Case001-Test search window
-    [Tags]    DEBUG
+Case001-Test search window-chrome
+    [Tags]    chromeNode1
     Sleep   5
     Click Element    id:onetrust-accept-btn-handler
     Sleep   1
@@ -46,5 +46,3 @@ Case001-Test search window
     sleep   1
     JSQuerySelectorClick    class   blockListProduct__delete qaBlockListProduct__delete
     sleep   1
-
-
