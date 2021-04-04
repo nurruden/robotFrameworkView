@@ -8,5 +8,5 @@ WORKDIR /frontend-integration-tests
 # Install the test project libraries
 RUN pip install -r requirements.txt
 ENTRYPOINT ["/frontend-integration-tests/scripts/executeTest.sh"]
-CMD ["suite","testTag","testCaseName"]
+#CMD ["suite","testTag","testCaseName"]
 
