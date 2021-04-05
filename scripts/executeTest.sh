@@ -55,7 +55,7 @@ fi
 
 if [ -z "$testTag" ] && [ -z "$testCaseName" ]; then
 #if we have one of test tag and test case
-cd ${TSTROOT} ; ./run.sh -L DEBUG ${suite} || true
+cd ${TSTROOT} ; ./run.sh -d ./results/gc -L DEBUG official || true
 #after rerun merge test
 
 fi

@@ -6,7 +6,7 @@ ${password}         654!@#qwe
 ${URL}              https://www.westwingnow.de
 *** Keywords ***
 WW WEB UI StartTest-Chrome
-   Open browser  ${URL}  browser=${ChromeBROWSER}     remote_url=http://localhost:4444/wd/hub
+   Open browser  ${URL}  browser=${ChromeBROWSER}     remote_url=http://hub:4444/wd/hub
    Set Browser Implicit Wait  50
    Maximize Browser Window
    sleep    2

@@ -2,11 +2,12 @@
 # Base image
 FROM python:3.9
 # Copy test project files to the image folder
-COPY . /frontend-integration-tests
+COPY . /robotFrameworkView
 # Make the folder as a working directory
-WORKDIR /frontend-integration-tests
+WORKDIR /robotFrameworkView
 # Install the test project libraries
 RUN pip install -r requirements.txt
-ENTRYPOINT ["/frontend-integration-tests/scripts/executeTest.sh"]
+#RUN chmod +x /frontend-integration-tests/scripts/executeTest.sh
+ENTRYPOINT ["robotFrameworkView"]
 #CMD ["suite","testTag","testCaseName"]
 
