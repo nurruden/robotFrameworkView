@@ -44,7 +44,7 @@ services:
     entrypoint: /robotFrameworkView/scripts/executeTest.sh
     command: --suite official
     volumes:
-      - ./robot/tests:/tests:ro
+      - ./robot/robotFrameworkView:/robotFrameworkView:ro
       - ./results/gc:/out:rw
     depends_on:
       - chrome
